@@ -20,14 +20,15 @@
       </ul>
 
       <div id="nav-social">
-        <a href="https://facebook.com/tulinkpersonal" target="_blank" rel="noopener" aria-label="Facebook">
+        <a href="https://www.facebook.com/people/Mix-Now-Hormigones/100071983115782/" target="_blank" rel="noopener" aria-label="Facebook">
           <img src="img/facebook.png" alt="Facebook">
         </a>
-        <a href="https://instagram.com/tulinkpersonal" target="_blank" rel="noopener" aria-label="Instagram">
+        <a href="https://www.instagram.com/mixnow.cl/" target="_blank" rel="noopener" aria-label="Instagram">
           <img src="img/ig.png" alt="Instagram">
         </a>
       </div>
     </nav>
+
     <section id="text-nav">
         <h1 id="bienvenida">Bienvenido a MixNow.CL Hormigones</h1>
         <p id="subtitulo">Especialistas en hormigones de alta calidad.</p>
@@ -36,29 +37,35 @@
   
   <!-- HERO -->
   <section id="hero">
-    <img src="img/fondo.jpg" alt="Fondo Hormigón" id="hero-img" style="width:100%;height:auto;display:block;position:absolute;top:0;left:0;z-index:1;opacity:0.5;">
-    </div>
+    <img src="img/fondo.jpg" alt="Fondo Hormigón" class="hero-bg">
+    <div class="hero-overlay"></div>
   </section>
-    <!-- MAIN CONTENT -->
-    <main id="main-content">
-        <h2 id="Nuestro-Trabajo">Nuestro Trabajo</h2>
-        <div class="card">
-            <video controls width="100%" poster="img/proyecto1.jpg" style="border-radius:1rem;">
-                <source src="video/mixnow_video.mp4" type="video/mp4">
-                Tu navegador no soporta el video.
-            </video>
-        </div>
-        <div class="card">
-            <img src="img/proyecto2.jpg" alt="Proyecto 2">
-            <div class="card-content">
-            </div>
-        </div>
-        <div class="card">
-            <img src="img/proyecto3.jpg" alt="Proyecto 3">
-            <div class="card-content">
-            </div>
-        </div>
-    </main>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+    <h1 id="Nuestro-Trabajo">Nuestro Trabajo</h1>
+
+    <!-- Video a lo ancho -->
+    <div class="media-block">
+        <video autoplay muted playsinline controls class="video-proyecto">
+            <source src="video/mixnow_video.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+
+    </div>
+
+    <!-- Imágenes apiladas a lo ancho -->
+    <div class="media-block">
+      <img src="img/trabajo2.jpg" alt="Proyecto 2" class="video-proyecto">
+    </div>
+    <div class="media-block">
+      <img src="img/trabajo3.jpg" alt="Proyecto 3" class="video-proyecto">
+    </div>
+    <div class="media-block">
+      <img src="img/trabajo1.jpg" alt="Proyecto 4" class="video-proyecto">
+    </div>
+  </main>
+
   <!-- FOOTER -->
   <footer id="main-footer">
     <p>&copy; 2025 MixNow.CL. Todos los derechos reservados.</p>
