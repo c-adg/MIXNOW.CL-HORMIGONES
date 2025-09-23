@@ -213,3 +213,14 @@ body {
     font-size: 2rem;
   }
 }
+
+@media (max-width: 48rem) { /* tablets */
+  #logo { height: 3rem; }
+  #nav-list li a { font-size: 0.9rem; padding: 0.5rem 0.9rem; }
+}
+
+@media (max-width: 30rem) { /* celulares */
+  #nav-list { flex-direction: column; }
+  #bienvenida { font-size: 2rem; }
+}
+
