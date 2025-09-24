@@ -110,7 +110,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url('img/fondo.jpg');
+  background-image: url('img/fondo.jpg'); /* desktop */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -249,7 +249,7 @@ body {
 }
 
 .servicio-card.active .servicio-desc {
-  max-height: 10rem; /* Ajusta según tu contenido */
+  max-height: 10rem;
   padding: 1rem 1.5rem;
 }
 
@@ -341,9 +341,11 @@ body {
   }
 }
 
+/* ----------------- HERO RESPONSIVE ----------------- */
 @media (max-width: 768px) {
   #hero::before {
-    background-position: top center; /* muestra la parte superior de la imagen */
+    background-image: url('img/fondo-mobile.png'); /* móvil */
+    background-position: top center; /* parte superior visible */
   }
 }
 @media (max-width: 480px) {
