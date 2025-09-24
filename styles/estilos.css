@@ -399,7 +399,7 @@ body {
 /* ----------------- HERO RESPONSIVE ----------------- */
 @media (max-width: 768px) {
   #hero::before {
-    background-image: url('img/fondo.jpg'); /* móvil */
+    background-image: url('img/fondo-mobile.png'); /* móvil */
     background-size: cover;
     background-position: center;
   }
