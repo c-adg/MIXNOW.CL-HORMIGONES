@@ -194,7 +194,7 @@ body {
   display: block;
 }
 
-/* ----------------- SERVICIOS (ACORDEÓN) ----------------- */
+/* ----------------- SERVICIOS ----------------- */
 .titulo-seccion {
   text-align: center;
   font-size: 2.6rem;
@@ -253,6 +253,36 @@ body {
   padding: 1rem 1.5rem;
 }
 
+/* ----------------- CLIENTES ----------------- */
+.cards-clientes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  margin-bottom: 2rem;
+}
+
+.cards-clientes img {
+  width: 100%;
+  max-width: 22rem;
+  height: 15rem;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  background: transparent;
+  display: block;
+}
+
+.titulo-seccion {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 1000;
+  color: #ffe066;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05rem;
+}
+
 /* ----------------- FOOTER ----------------- */
 #main-footer {
   background: #111;
@@ -303,33 +333,6 @@ body {
   .servicio-card { padding: 0.5rem; }
 }
 
-/* CLIENTES - grid ordenado y responsivo */
-.cards-clientes {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  justify-items: center;
-  margin-bottom: 2rem;
-}
-.cards-clientes img {
-  width: 100%;
-  max-width: 22rem;
-  height: 15rem;
-  object-fit: contain;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-  background: transparent;
-  display: block;
-}
-.titulo-seccion {
-  text-align: center;
-  font-size: 2rem;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 1000;
-  color: #ffe066;
-  margin-bottom: 2rem;
-  letter-spacing: 0.05rem;
-}
 @media (max-width: 768px) {
   .cards-clientes {
     grid-template-columns: 1fr;
@@ -344,12 +347,42 @@ body {
 /* ----------------- HERO RESPONSIVE ----------------- */
 @media (max-width: 768px) {
   #hero::before {
-    background-image: url('img/fondo-mobile.png'); /* móvil */
-    background-position: top center; /* parte superior visible */
+    background-image: url('img/fondo.jpg'); /* móvil */
+    background-size: cover;
+    background-position: center;
   }
 }
 @media (max-width: 480px) {
   #hero::before {
-    background-position: center; /* centra la imagen en pantallas muy pequeñas */
+    background-position: center;
   }
+}
+
+/* ----------------- HERO IMAGE CARD ----------------- */
+#hero .cards-grid {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+#hero .card {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 2rem rgba(0,0,0,0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#hero .card:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2.5rem rgba(255, 224, 102, 0.2);
+}
+
+#hero .card img.media-block {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;      
+  border-radius: 1rem;
 }
