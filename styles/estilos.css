@@ -330,12 +330,6 @@ body {
     gap: 1rem;
   }
   .cards-clientes img {
-@media (max-width: 768px) {
-  .cards-clientes {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  .cards-clientes img {
   #hero::before {
     background-position: top center; /* shows the top part of the image */
   }
@@ -349,5 +343,16 @@ body {
   #hero::before {
     background-position: center; /* centers the image on very small screens */
   }
+  #main-header {
+    padding: 0.5rem;
+  }
+  #main-content {
+    padding: 0.5rem;
+  }
+  .media-block video,
+  .media-block img {
+    border-radius: 0; /* opcional: sin borde redondeado */
+  }
+}
 }
 
