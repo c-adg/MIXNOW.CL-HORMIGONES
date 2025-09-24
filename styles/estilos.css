@@ -110,7 +110,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url('img/fondo.jpg'); /* desktop */
+  background-image: url('img/fondo-mobile.png'); /* desktop */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
