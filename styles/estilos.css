@@ -104,8 +104,8 @@ body {
   position: absolute;
   inset: 0;
   background-image: url('img/fondo.jpg');
-  background-size: contain; /* se ve toda la imagen */
-  background-position: center;
+  background-size: cover;      /* Cubre todo el área sin deformar */
+  background-position: center; /* Centra la imagen */
   background-repeat: no-repeat;
   opacity: 0.5;
   z-index: 1;
@@ -145,20 +145,65 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Grid para las cartas de proyectos */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  margin-bottom: 2rem;
+}
+.card {
+  width: 100%;
+  max-width: 500px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Media blocks (video e imágenes a lo ancho) */
 .media-block {
   width: 100%;
-  margin-bottom: 2rem;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  background: #111;
+  display: block;
 }
 
-.media-block video,
-.media-block img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 1rem;
-  object-fit: cover;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+@media (max-width: 768px) { /* tablets */
+  #main-header {
+    padding: 1rem 0.5rem;
+  }
+  #main-content {
+    padding: 1rem;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .media-block {
+    height: 200px;
+    border-radius: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) { /* celulares */
+  #main-header {
+    padding: 0.5rem;
+  }
+  #main-content {
+    padding: 0.5rem;
+  }
+  .media-block video,
+  .media-block img {
+    border-radius: 0; /* opcional: sin borde redondeado */
+  }
 }
 
 /* ----------------- FOOTER ----------------- */
@@ -191,27 +236,4 @@ body {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(1.25rem); }
   to   { opacity: 1; transform: translateY(0); }
-}
-
-/* ----------------- RESPONSIVE ----------------- */
-@media (max-width: 768px) { /* tablets */
-  #main-header {
-    padding: 1rem 0.5rem;
-  }
-  #main-content {
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 480px) { /* celulares */
-  #main-header {
-    padding: 0.5rem;
-  }
-  #main-content {
-    padding: 0.5rem;
-  }
-  .media-block video,
-  .media-block img {
-    border-radius: 0; /* opcional: sin borde redondeado */
-  }
 }
