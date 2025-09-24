@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MIX NOW HORMIGONES SPA</title>
-  <link rel="stylesheet" href="styles/estilos.css">
   <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/estilos.css">
 </head>
 <body>
   <!-- HEADER -->
@@ -15,24 +15,27 @@
     <nav id="main-nav">
       <ul id="nav-list">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="#main-content2">Servicios</a></li>
+        <li><a href="#clientes">Nuestros Clientes</a></li>
         <li><a href="#main-content">Nuestro Trabajo</a></li>
         <li><a href="#main-footer">Contacto</a></li>
       </ul>
 
       <div id="nav-social">
-        <a href="https://www.facebook.com/people/Mix-Now-Hormigones/100071983115782/" target="_blank" rel="noopener" aria-label="Facebook">
+        <a href="https://www.facebook.com/people/Mix-Now-Hormigones/100071983115782/"
+           target="_blank" rel="noopener" aria-label="Facebook">
           <img src="img/facebook.png" alt="Facebook">
         </a>
-        <a href="https://www.instagram.com/mixnow.cl/" target="_blank" rel="noopener" aria-label="Instagram">
+        <a href="https://www.instagram.com/mixnow.cl/"
+           target="_blank" rel="noopener" aria-label="Instagram">
           <img src="img/ig.png" alt="Instagram">
         </a>
       </div>
     </nav>
 
     <section id="text-nav">
-        <h1 id="bienvenida">Bienvenido a MixNow.CL Hormigones</h1>
-        <p id="subtitulo">Especialistas en hormigones de alta calidad.</p>
+      <h1 id="bienvenida">Bienvenido a MixNow.CL Hormigones</h1>
+      <p id="subtitulo">Especialistas en hormigones de alta calidad.</p>
     </section>
   </header>
   
@@ -47,6 +50,9 @@
     <h1 id="Nuestro-Trabajo">Nuestro Trabajo</h1>
 
     <div class="cards-grid">
+       <div class="card">
+        <img src="img/trabajo2.jpg" alt="Proyecto 2" class="media-block">
+      </div>
       <div class="card">
         <video controls poster="img/trabajo1.jpg" class="media-block" loop autoplay muted>
           <source src="video/mixnow_video.mp4" type="video/mp4">
@@ -54,29 +60,53 @@
         </video>
       </div>
       <div class="card">
-        <img src="img/trabajo2.jpg" alt="Proyecto 2" class="media-block">
-      </div>
-      <div class="card">
         <img src="img/trabajo3.jpg" alt="Proyecto 3" class="media-block">
       </div>
-      <div class="card">
-        <img src="img/trabajo4.jpg" alt="Proyecto 4" class="media-block">
-      </div>
-    </div>
   </main>
 
+  <!-- SERVICIOS -->
   <main id="main-content2">
-    <h1>Servicios</h1>
+    <h1 id="Servicios" class="titulo-seccion">Servicios</h1>
+    <div class="cards-grid">
+      <div class="card servicio-card">
+        <div class="card-content">
+          <h2 class="servicio-titulo">2 Plantas Certificadas</h2>
+          <p class="servicio-desc">
+            Nuestras plantas están certificadas y cuentan con automatización inteligente,
+            ofreciendo estructura compacta, disposición flexible, menor inversión y fácil transporte.
+          </p>
+        </div>
+      </div>
+      <div class="card servicio-card">
+        <div class="card-content">
+          <h2 class="servicio-titulo">7 Camiones Mixer</h2>
+          <p class="servicio-desc">
+            Nuestros camiones MIXER trasladan la mezcla hasta el frente de trabajo
+            y la descargan a la velocidad de rotación óptima, asegurando consistencia
+            y evitando deterioros por exceso de movimiento.
+          </p>
+        </div>
+      </div>
+      <div class="card servicio-card">
+        <div class="card-content">
+          <h2 class="servicio-titulo">5 Camiones Bomba</h2>
+          <p class="servicio-desc">
+            Contamos con bombas de hormigón para facilitar el traslado y aplicación
+            en obras de difícil acceso, garantizando rapidez y eficiencia.
+          </p>
+        </div>
+      </div>
+    </div>
   </main>
 
   <!-- FOOTER -->
   <footer id="main-footer">
     <p>&copy; 2025 MixNow.CL. Todos los derechos reservados.</p>
     <section id="contacto-footer" class="contacto-footer">
-        <h2>Contacto:</h2>
-        <p>Teléfono: +56 9 6423 7424</p>
-        <p>Email: mixnowhormigones@gmail.com</p>
-        <p>Dirección: Anibal Celedon 1234, Arica, Chile</p>
+      <h2>Contacto:</h2>
+      <p>Teléfono: +56 9 6423 7424</p>
+      <p>Email: mixnowhormigones@gmail.com</p>
+      <p>Dirección: Anibal Celedon 1234, Arica, Chile</p>
     </section>
   </footer>
 </body>
