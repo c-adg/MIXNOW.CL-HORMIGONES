@@ -6,6 +6,7 @@
   font-weight: 600;
 }
 
+/* ----------------- HTML BASE ----------------- */
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -50,7 +51,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #nav-list {
@@ -59,7 +60,6 @@ body {
   flex-wrap: wrap;
   gap: 1.5rem;
   list-style: none;
-  
 }
 
 #nav-list li a {
@@ -74,6 +74,7 @@ body {
   letter-spacing: 0.125rem;
   transition: all 0.3s ease;
 }
+
 #nav-list li a:hover {
   background: #ffe066;
   color: #111;
@@ -86,11 +87,13 @@ body {
   justify-content: center;
   gap: 1rem;
 }
+
 #nav-social img {
   height: 2rem;
   width: 2rem;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
+
 #nav-social a:hover img {
   transform: scale(1.2);
   filter: brightness(1.3);
@@ -125,12 +128,12 @@ body {
 }
 
 #bienvenida {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: italic;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: italic;
 }
 
 #subtitulo {
@@ -139,7 +142,7 @@ body {
   letter-spacing: 0.05rem;
   text-align: center;
   animation: fadeInUp 1.2s ease forwards;
-  font-family: italic
+  font-family: italic;
 }
 
 /* ----------------- MAIN CONTENT ----------------- */
@@ -162,7 +165,6 @@ body {
   letter-spacing: 0.1rem;
 }
 
-/* Grid para las cartas de proyectos */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
@@ -180,12 +182,12 @@ body {
   box-shadow: 0 0.5rem 2rem rgba(0,0,0,0.25);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
 .card:hover {
   transform: translateY(-0.5rem);
   box-shadow: 0 1rem 2.5rem rgba(255, 224, 102, 0.2);
 }
 
-/* Media blocks (video e imágenes) */
 .media-block {
   width: 100%;
   height: 22rem;
@@ -194,7 +196,7 @@ body {
   display: block;
 }
 
-/* ----------------- SERVICIOS ----------------- */
+/* ----------------- SERVICIOS (ACORDEÓN) ----------------- */
 .titulo-seccion {
   text-align: center;
   font-size: 2.6rem;
@@ -204,34 +206,53 @@ body {
 }
 
 .servicio-card {
+  width: 100%;
+  max-width: 30rem;
   background: #1c1c1c;
   border-radius: 1rem;
-  padding: 2rem 1.5rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.2);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.4s ease;
+}
+
+.servicio-header {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.2);
-  transition: all 0.4s ease;
-  font-family: 'Roboto', sans-serif;
-}
-.servicio-card:hover {
-  transform: translateY(-0.5rem);
-  box-shadow: 0 1rem 2.5rem rgba(255, 224, 102, 0.25);
+  text-align: center;
 }
 
-.servicio-titulo {
+.servicio-header h2 {
   font-size: 2rem;
   color: #ffe066;
-  margin-bottom: 1rem;
-  text-align: center;
+  margin-bottom: 0.5rem;
   font-weight: 700;
 }
 
+.servicio-header span {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 0.2rem;
+}
+
 .servicio-desc {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0 1.5rem;
   font-size: 1.25rem;
   color: #ddd;
   text-align: center;
   line-height: 1.7;
+}
+
+.servicio-card.active .servicio-desc {
+  max-height: 10rem; /* Ajusta según tu contenido */
+  padding: 1rem 1.5rem;
 }
 
 /* ----------------- FOOTER ----------------- */
@@ -257,7 +278,6 @@ body {
   border-radius: 0.5rem;
   padding: 1.5rem 2rem;
   box-shadow: 0 0.2rem 1rem rgba(0,0,0,0.15);
-  font-family: 'Roboto', sans-serif;
 }
 
 /* ----------------- ANIMACIONES ----------------- */
@@ -275,12 +295,12 @@ body {
 @media (max-width: 48rem) {
   #main-content { padding: 1.5rem; }
   .media-block { height: 16rem; }
-  .servicio-card { padding: 1.5rem 1rem; }
+  .servicio-card { padding: 1rem; }
 }
 
 @media (max-width: 30rem) {
   #main-header { padding: 1rem; }
   #main-content { padding: 1rem; }
   .media-block { height: 14rem; border-radius: 0.5rem; }
-  .servicio-card { padding: 1rem; }
+  .servicio-card { padding: 0.5rem; }
 }

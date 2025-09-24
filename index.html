@@ -16,7 +16,7 @@
       <ul id="nav-list">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="#main-content2">Servicios</a></li>
-        <li><a href="#clientes">Nuestros Clientes</a></li>
+        <li><a href="#clientes">Clientes</a></li>
         <li><a href="#main-content">Nuestro Trabajo</a></li>
         <li><a href="#main-footer">Contacto</a></li>
       </ul>
@@ -62,39 +62,43 @@
       <div class="card">
         <img src="img/trabajo3.jpg" alt="Proyecto 3" class="media-block">
       </div>
+    </div>
   </main>
 
   <!-- SERVICIOS -->
   <main id="main-content2">
     <h1 id="Servicios" class="titulo-seccion">Servicios</h1>
     <div class="cards-grid">
-      <div class="card servicio-card">
-        <div class="card-content">
-          <h2 class="servicio-titulo">2 Plantas Certificadas</h2>
-          <p class="servicio-desc">
-            Nuestras plantas están certificadas y cuentan con automatización inteligente,
-            ofreciendo estructura compacta, disposición flexible, menor inversión y fácil transporte.
-          </p>
+      <div class="servicio-card">
+        <div class="servicio-header">
+          <h2>2 Plantas Certificadas</h2>
+          <span>Presione aquí</span>
         </div>
+        <p class="servicio-desc">
+          Nuestras plantas están certificadas y cuentan con automatización inteligente,
+          ofreciendo estructura compacta, disposición flexible, menor inversión y fácil transporte.
+        </p>
       </div>
-      <div class="card servicio-card">
-        <div class="card-content">
-          <h2 class="servicio-titulo">7 Camiones Mixer</h2>
-          <p class="servicio-desc">
-            Nuestros camiones MIXER trasladan la mezcla hasta el frente de trabajo
-            y la descargan a la velocidad de rotación óptima, asegurando consistencia
-            y evitando deterioros por exceso de movimiento.
-          </p>
+      <div class="servicio-card">
+        <div class="servicio-header">
+          <h2>7 Camiones Mixer</h2>
+          <span>Presione aquí</span>
         </div>
+        <p class="servicio-desc">
+          Nuestros camiones MIXER trasladan la mezcla hasta el frente de trabajo
+          y la descargan a la velocidad de rotación óptima, asegurando consistencia
+          y evitando deterioros por exceso de movimiento.
+        </p>
       </div>
-      <div class="card servicio-card">
-        <div class="card-content">
-          <h2 class="servicio-titulo">5 Camiones Bomba</h2>
-          <p class="servicio-desc">
-            Contamos con bombas de hormigón para facilitar el traslado y aplicación
-            en obras de difícil acceso, garantizando rapidez y eficiencia.
-          </p>
+      <div class="servicio-card">
+        <div class="servicio-header">
+          <h2>5 Camiones Bomba</h2>
+          <span>Presione aquí</span>
         </div>
+        <p class="servicio-desc">
+          Contamos con bombas de hormigón para facilitar el traslado y aplicación
+          en obras de difícil acceso, garantizando rapidez y eficiencia.
+        </p>
       </div>
     </div>
   </main>
@@ -109,5 +113,15 @@
       <p>Dirección: Anibal Celedon 1234, Arica, Chile</p>
     </section>
   </footer>
+
+  <!-- SCRIPT ACORDEÓN -->
+  <script>
+    const cards = document.querySelectorAll('.servicio-card');
+    cards.forEach(card => {
+      card.querySelector('.servicio-header').addEventListener('click', () => {
+        card.classList.toggle('active');
+      });
+    });
+  </script>
 </body>
 </html>
