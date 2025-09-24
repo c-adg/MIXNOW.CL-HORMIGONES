@@ -139,7 +139,7 @@ body {
   letter-spacing: 0.05rem;
   text-align: center;
   animation: fadeInUp 1.2s ease forwards;
-  font-family: 'Roboto', sans-serif;
+  font-family: italic
 }
 
 /* ----------------- MAIN CONTENT ----------------- */
