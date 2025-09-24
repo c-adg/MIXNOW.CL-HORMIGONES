@@ -343,6 +343,20 @@ body {
 
 @media (max-width: 768px) {
   #hero::before {
-    background-position: top center; /* centra la parte importante */
+    background-position: top center; /* muestra la parte superior de la imagen */
   }
 }
+@media (max-width: 480px) {
+  #hero::before {
+    background-position: center; /* centra la imagen en pantallas muy pequeñas */
+  }
+}
+
+@media (max-width: 768px) {
+  #hero::before {
+    background-image: url('img/fondo-mobile.png');
+    background-position: center;
+    background-size: cover;
+  }
+}
+
