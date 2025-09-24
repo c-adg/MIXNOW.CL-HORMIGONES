@@ -111,8 +111,8 @@ body {
   position: absolute;
   inset: 0;
   background-image: url('img/fondo.jpg');
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: top center;
   background-repeat: no-repeat;
   opacity: 0.4;
   filter: grayscale(15%) brightness(0.7);
