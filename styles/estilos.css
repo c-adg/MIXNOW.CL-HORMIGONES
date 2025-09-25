@@ -195,40 +195,58 @@ body {
 }
 
 /* ----------------- SERVICIOS ----------------- */
-.titulo-seccion {
-  text-align: center;
-  font-size: 2.6rem;
-  margin-bottom: 3rem;
-  color: #ffe066;
-  letter-spacing: 0.1rem;
-}
-
 .servicio-card {
   width: 100%;
-  max-width: 30rem;
-  background: #1c1c1c;
-  border-radius: 1rem;
-  box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.2);
-  margin-bottom: 1.5rem;
+  max-width: 20rem;
+  background: #000; /* fondo negro */
+  border: 0.3rem solid #fff; /* borde blanco visible */
+  box-shadow: 0.8rem 0.8rem 0 #fff; /* sombra tipo uiverse */
+  border-radius: 1.5rem;
+  margin-bottom: 2rem;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
-  transition: all 0.4s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.servicio-card:hover {
+  transform: translate(-0.5rem, -0.5rem);
+  box-shadow: 1.2rem 1.2rem 0 #ffe066; /* sombra amarilla al hover */
 }
 
 .servicio-header {
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 2rem;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transition: background 0.3s, color 0.3s;
+  border-bottom: 0.05rem solid rgba(255, 224, 102, 0.2);
 }
 
 .servicio-header h2 {
   font-size: 2rem;
-  color: #ffe066;
+  color: #ffe066; /* letras amarillas */
   margin-bottom: 0.5rem;
   font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.servicio-header h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 0.2rem;
+  background-color: #ffe066;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+}
+
+.servicio-card:hover .servicio-header h2::after {
+  transform: translateX(0);
 }
 
 .servicio-header span {
@@ -241,17 +259,18 @@ body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease, padding 0.4s ease;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
   font-size: 1.25rem;
-  color: #ddd;
+  color: #ffe066; /* descripción amarilla */
   text-align: center;
   line-height: 1.7;
 }
 
 .servicio-card.active .servicio-desc {
-  max-height: 10rem;
-  padding: 1rem 1.5rem;
+  max-height: 12rem;
+  padding: 1rem 2rem;
 }
+
 
 /* ----------------- CLIENTES ----------------- */
 .cards-clientes {
@@ -262,6 +281,7 @@ body {
   margin-bottom: 2rem;
 }
 
+/* ----------------- CLIENTES HOVER ----------------- */
 .cards-clientes img {
   width: 100%;
   max-width: 22rem;
@@ -271,7 +291,14 @@ body {
   box-shadow: 0 2px 12px rgba(0,0,0,0.10);
   background: transparent;
   display: block;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
+.cards-clientes img:hover {
+  transform: translateY(-0.5rem) scale(1.05);
+  box-shadow: 0 1rem 2rem rgba(255, 224, 102, 0.2);
+}
+
 
 .titulo-seccion {
   text-align: center;
