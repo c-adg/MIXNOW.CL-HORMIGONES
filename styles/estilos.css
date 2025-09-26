@@ -349,6 +349,11 @@ body {
   color: #aaa;
 }
 
+#main-footer p {
+  font-size: 1.3rem;
+
+}
+
 .contacto-footer {
   margin-top: 2rem;
   text-align: left;
@@ -383,12 +388,12 @@ body {
 }
 
 .whatsapp-logo {
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 .numero-wsp {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: #fff;
   font-family: 'Roboto', Arial, sans-serif;
   font-weight: 700;
@@ -399,8 +404,8 @@ body {
   color: #fff;
   border: none;
   border-radius: 1rem;
-  padding: 0.3rem 1rem;
-  font-size: 1rem;
+  padding: 0.15rem 0.7rem;
+  font-size: 0.85rem;
   cursor: pointer;
   font-family: 'Roboto', Arial, sans-serif;
   font-weight: 500;
@@ -496,4 +501,22 @@ body {
 
 @media (max-width: 48rem) {
   .hero-extra { max-width: 95%; padding: 1rem; }
+}
+
+.btn-wsp {
+  height: 2.3rem;     
+  border: 0.1875rem solid #fdfdfd;  
+  border-radius: 2.8125rem;         
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: #ffffff;
+  color: #333;
+  font-size: 1.2rem;    
+  font-weight: 550;
+}
+
+.btn-wsp:hover {
+  background: #25d366;  
+  color: #ffffff;
+  transform: scale(1.1);
 }
