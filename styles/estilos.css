@@ -151,18 +151,34 @@ body {
   z-index: 2;
 }
 
-/* Servicio-card dentro del hero (sobresale encima del fondo) */
 .hero-extra {
   position: relative;
   z-index: 3;
-  max-width: 60rem; /* más ancha que las de la sección servicios */
-  width: 90%;
+  width: 100%;
+  max-width: 20rem; /* igual que las tarjetas de servicios */
   margin: 0 auto;
-  background: rgba(0,0,0,0.6); /* un poco translúcido sobre la imagen */
+  background: rgba(0,0,0,0.6);
   border-radius: 1rem;
   border: 0.3rem solid #fff;
   box-shadow: 0.8rem 0.8rem 0 #fff;
-  padding: 1.5rem 2rem;
+  padding: 1rem 1.5rem;
+}
+
+/* Ajustes móviles */
+@media (max-width: 48rem) {
+  .hero-extra {
+    width: 90%;
+    max-width: 90%;
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .hero-extra {
+    width: 95%;
+    max-width: 95%;
+    padding: 0.6rem 0.8rem;
+  }
 }
 
 /* ----------------- MAIN CONTENT ----------------- */
