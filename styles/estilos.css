@@ -79,7 +79,7 @@ body {
 
 #nav-list li a:hover {
   transform: translate(-0.5rem, -0.5rem);
-  box-shadow: 1.2rem 1.2rem 0 #ffe066; /* sombra amarilla al hover */
+  box-shadow: 1.2rem 1.2rem 0 #ffe066;
   color: #ffe066;
 }
 
@@ -102,34 +102,7 @@ body {
   filter: brightness(1.3);
 }
 
-/* ----------------- HERO ----------------- */
-#hero {
-  position: relative;
-  text-align: center;
-  padding: 4rem 1rem;
-  min-height: 40rem;
-  overflow: hidden;
-}
-
-#hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url('img/fondo-mobile.png'); /* desktop */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.4;
-  filter: grayscale(15%) brightness(0.7);
-  z-index: 1;
-  transition: all 0.5s ease;
-}
-
-#hero > * {
-  position: relative;
-  z-index: 2;
-}
-
+/* ----------------- BIENVENIDA ----------------- */
 #bienvenida {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
@@ -146,6 +119,40 @@ body {
   text-align: center;
   animation: fadeInUp 1.2s ease forwards;
   font-family: italic;
+}
+
+/* ----------------- HERO ----------------- */
+#hero {
+  position: relative;
+  text-align: center;
+  padding: 4rem 1rem;
+  min-height: 40rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-bg {
+  width: 100%;
+  max-width: 35rem;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 1rem;
+  box-shadow: 0 0.125rem 0.75rem rgba(0,0,0,0.12);
+  position: relative;
+  z-index: 2;
+  object-fit: contain;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 1;
+  border-radius: 1rem;
 }
 
 /* ----------------- MAIN CONTENT ----------------- */
@@ -171,6 +178,16 @@ body {
 .card {
   width: 100%;
   max-width: 30rem;
+  background: #1a1a1a;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 2rem rgba(0,0,0,0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card-1 {
+  width: 100%;
+  max-width: 40rem;
   background: #1a1a1a;
   border-radius: 1rem;
   overflow: hidden;
@@ -283,7 +300,7 @@ body {
   height: 15rem;
   object-fit: contain;
   border-radius: 0.5rem;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  box-shadow: 0 0.125rem 0.75rem rgba(0,0,0,0.10);
   background: transparent;
   display: block;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -336,6 +353,7 @@ body {
   align-items: center;
   margin-bottom: 1rem;
 }
+
 .whatsapp-contact {
   display: flex;
   align-items: center;
@@ -343,18 +361,21 @@ body {
   background: #222;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.08);
 }
+
 .whatsapp-logo {
   width: 2rem;
   height: 2rem;
 }
+
 .numero-wsp {
   font-size: 1.1rem;
   color: #fff;
   font-family: 'Roboto', Arial, sans-serif;
   font-weight: 700;
 }
+
 .btn-wsp {
   background: #25d366;
   color: #fff;
@@ -367,6 +388,7 @@ body {
   font-weight: 500;
   transition: background 0.2s;
 }
+
 .btn-wsp:hover {
   background: #128c7e;
 }
@@ -382,40 +404,15 @@ body {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* ----------------- RESPONSIVE ----------------- */
-@media (max-width: 48rem) {
-  #main-content { padding: 1.5rem; }
-  .media-block { height: 16rem; }
-  .servicio-card { padding: 1rem; }
-}
-
-@media (max-width: 30rem) {
-  #main-header { padding: 1rem; }
-  #main-content { padding: 1rem; }
-  .media-block { height: 14rem; border-radius: 0.5rem; }
-  .servicio-card { padding: 0.5rem; }
-}
-
-@media (max-width: 768px) {
-  .cards-clientes {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  .cards-clientes img {
-    max-width: 100%;
-    height: 5rem;
-  }
-}
-
 .social-btn {
   position: relative;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  border: 1px solid rgb(0, 0, 0); 
+  border: 0.0625rem solid rgb(0, 0, 0); 
   font-size: 0.875rem;
   text-transform: uppercase;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   background: transparent;
   color: #fff;
   overflow: hidden;
@@ -452,4 +449,29 @@ body {
   0% { opacity: 0; left: 0; }
   50% { opacity: 1; }
   100% { opacity: 0; left: 100%; }
+}
+
+/* ----------------- RESPONSIVE ----------------- */
+@media (max-width: 48rem) {
+  #main-content { padding: 1.5rem; }
+  .media-block { height: 16rem; }
+  .servicio-card { padding: 1rem; }
+}
+
+@media (max-width: 30rem) {
+  #main-header { padding: 1rem; }
+  #main-content { padding: 1rem; }
+  .media-block { height: 14rem; border-radius: 0.5rem; }
+  .servicio-card { padding: 0.5rem; }
+}
+
+@media (max-width: 48rem) {
+  .cards-clientes {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .cards-clientes img {
+    max-width: 100%;
+    height: auto;
+  }
 }
