@@ -14,7 +14,7 @@
 
     <nav id="main-nav">
       <ul id="nav-list">
-        <li><a href="#main-content2">Servicios</a></li>
+        <li><a href="#main-content2">Nuestros Implementos</a></li>
         <li><a href="#clientes">Clientes</a></li>
         <li><a href="#main-content">Nuestro Trabajo</a></li>
         <li><a href="#main-footer">Contacto</a></li>
@@ -44,8 +44,19 @@
   <!-- HERO -->
   <section id="hero">
     <img src="img/fondo.jpg" alt="Fondo Hormigón" class="hero-bg">
-    <p>Venta de hormigón desde 0,5 m3- Mejoramos precio - Todo medio de pago (Transbank)- Paga lo que usas!!</p>
     <div class="hero-overlay"></div>
+
+    <div class="servicio-card hero-extra">
+      <div class="servicio-header">
+        <h2>Hormigón de Calidad</h2>
+        <span>Presione aquí</span>
+      </div>
+      <p class="servicio-desc">
+        Venta de hormigón desde 0,5 m3- Mejoramos precio <br>
+        Todo medio de pago (Transbank)
+        Paga lo que usas!! 
+      </p>
+    </div>
   </section>
 
   <!-- MAIN CONTENT -->
@@ -148,11 +159,14 @@
     </section>
   </footer>
 
-  <!-- SCRIPT ACORDEÓN DE CARTAS -->
+  <!-- SCRIPTS -->
   <script>
+    // Acordeón: reutiliza para hero y para todas las tarjetas .servicio-card
     const cards = document.querySelectorAll('.servicio-card');
     cards.forEach(card => {
-      card.querySelector('.servicio-header').addEventListener('click', () => {
+      const header = card.querySelector('.servicio-header');
+      if (!header) return;
+      header.addEventListener('click', () => {
         card.classList.toggle('active');
       });
     });

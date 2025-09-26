@@ -8,7 +8,7 @@
 
 /* ----------------- HTML BASE ----------------- */
 html {
-  font-size: 16px;
+  font-size: 1.6rem;
   scroll-behavior: smooth;
 }
 
@@ -109,7 +109,7 @@ body {
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   text-align: center;
-  font-family: italic;
+  font-style: italic;
 }
 
 #subtitulo {
@@ -118,7 +118,7 @@ body {
   letter-spacing: 0.05rem;
   text-align: center;
   animation: fadeInUp 1.2s ease forwards;
-  font-family: italic;
+  font-style: italic;
 }
 
 /* ----------------- HERO ----------------- */
@@ -136,23 +136,33 @@ body {
 
 .hero-bg {
   width: 100%;
-  max-width: 35rem;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 1rem;
-  box-shadow: 0 0.125rem 0.75rem rgba(0,0,0,0.12);
-  position: relative;
-  z-index: 2;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.6;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.3);
-  z-index: 1;
+  background: rgba(0,0,0,0.55);
+  z-index: 2;
+}
+
+/* Servicio-card dentro del hero (sobresale encima del fondo) */
+.hero-extra {
+  position: relative;
+  z-index: 3;
+  max-width: 60rem; /* más ancha que las de la sección servicios */
+  width: 90%;
+  margin: 0 auto;
+  background: rgba(0,0,0,0.6); /* un poco translúcido sobre la imagen */
   border-radius: 1rem;
+  border: 0.3rem solid #fff;
+  box-shadow: 0.8rem 0.8rem 0 #fff;
+  padding: 1.5rem 2rem;
 }
 
 /* ----------------- MAIN CONTENT ----------------- */
@@ -185,16 +195,6 @@ body {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.card-1 {
-  width: 100%;
-  max-width: 40rem;
-  background: #1a1a1a;
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 0.5rem 2rem rgba(0,0,0,0.25);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
 .card:hover {
   transform: translateY(-0.5rem);
   box-shadow: 0 1rem 2.5rem rgba(255, 224, 102, 0.2);
@@ -209,6 +209,7 @@ body {
 }
 
 /* ----------------- SERVICIOS ----------------- */
+/* Estilos originales de tus tarjetas de servicio (mantenidos) */
 .servicio-card {
   width: 100%;
   max-width: 20rem;
@@ -280,6 +281,7 @@ body {
   line-height: 1.7;
 }
 
+/* Cuando se abre la tarjeta (mismo comportamiento que en servicios) */
 .servicio-card.active .servicio-desc {
   max-height: 12rem;
   padding: 1rem 2rem;
@@ -474,4 +476,8 @@ body {
     max-width: 100%;
     height: auto;
   }
+}
+
+@media (max-width: 48rem) {
+  .hero-extra { max-width: 95%; padding: 1rem; }
 }
