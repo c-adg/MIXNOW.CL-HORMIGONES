@@ -155,7 +155,7 @@ body {
   position: relative;
   z-index: 3;
   width: 100%;
-  max-width: 20rem; /* igual que las tarjetas de servicios */
+  max-width: 20rem; 
   margin: 0 auto;
   background: rgba(0,0,0,0.6);
   border-radius: 1rem;
@@ -225,7 +225,6 @@ body {
 }
 
 /* ----------------- SERVICIOS ----------------- */
-/* Estilos originales de tus tarjetas de servicio (mantenidos) */
 .servicio-card {
   width: 100%;
   max-width: 20rem;
@@ -399,22 +398,6 @@ body {
   font-weight: 700;
 }
 
-.btn-wsp {
-  background: #25d366;
-  color: #fff;
-  border: none;
-  border-radius: 1rem;
-  padding: 0.15rem 0.7rem;
-  font-size: 0.85rem;
-  cursor: pointer;
-  font-family: 'Roboto', Arial, sans-serif;
-  font-weight: 500;
-  transition: background 0.2s;
-}
-
-.btn-wsp:hover {
-  background: #128c7e;
-}
 
 /* ----------------- ANIMACIONES ----------------- */
 @keyframes fadeIn {
@@ -503,20 +486,38 @@ body {
   .hero-extra { max-width: 95%; padding: 1rem; }
 }
 
+/* ----------------- BOTÓN WHATSAPP ----------------- */
 .btn-wsp {
-  height: 2.3rem;     
-  border: 0.1875rem solid #fdfdfd;  
-  border-radius: 2.8125rem;         
-  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: #000;
+  border: 0.3rem solid #fff;
+  box-shadow: 0.8rem 0.8rem 0 #fff;
+  border-radius: 1.5rem;
+  letter-spacing: 0.1rem;
+  transition: transform 0.3s, box-shadow 0.3s, color 0.3s;
   cursor: pointer;
-  background: #ffffff;
-  color: #333;
-  font-size: 1.2rem;    
-  font-weight: 550;
+  margin-top: -1rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .btn-wsp:hover {
-  background: #25d366;  
+  transform: translate(-0.5rem, -0.5rem);
+  box-shadow: 1.2rem 1.2rem 0 #3bb90a;
   color: #ffffff;
-  transform: scale(1.1);
 }
+
+@media (max-width: 480px) {
+  .btn-wsp {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+
+
