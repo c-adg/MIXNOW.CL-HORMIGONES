@@ -489,7 +489,7 @@ body {
 /* ----------------- BOTÓN WHATSAPP ----------------- */
 .btn-wsp {
   display: inline-block;
-  padding: 0.6rem 1.2rem;
+  padding: 0.3rem 1.2rem;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1rem;
@@ -514,7 +514,7 @@ body {
 
 @media (max-width: 480px) {
   .btn-wsp {
-    padding: 0.8rem 1.5rem;
+    padding: 0.3rem 1.2rem;
     font-size: 1rem;
   }
 }
